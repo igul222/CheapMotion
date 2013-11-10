@@ -21,6 +21,8 @@
 		4CCAA6A2182F6D0500FFCCB5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCAA684182F6D0500FFCCB5 /* UIKit.framework */; };
 		4CCAA6AA182F6D0500FFCCB5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4CCAA6A8182F6D0500FFCCB5 /* InfoPlist.strings */; };
 		4CCAA6AC182F6D0500FFCCB5 /* CheapMotionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCAA6AB182F6D0500FFCCB5 /* CheapMotionTests.m */; };
+		4CCAA6B6182F71E100FFCCB5 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCAA6B5182F71E100FFCCB5 /* AVFoundation.framework */; };
+		4CCAA6BC182F8CA200FFCCB5 /* FrameProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCAA6BB182F8CA200FFCCB5 /* FrameProcessor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,9 @@
 		4CCAA6A7182F6D0500FFCCB5 /* CheapMotionTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CheapMotionTests-Info.plist"; sourceTree = "<group>"; };
 		4CCAA6A9182F6D0500FFCCB5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4CCAA6AB182F6D0500FFCCB5 /* CheapMotionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CheapMotionTests.m; sourceTree = "<group>"; };
+		4CCAA6B5182F71E100FFCCB5 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		4CCAA6BA182F8CA200FFCCB5 /* FrameProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FrameProcessor.h; sourceTree = "<group>"; };
+		4CCAA6BB182F8CA200FFCCB5 /* FrameProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FrameProcessor.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CCAA6B6182F71E100FFCCB5 /* AVFoundation.framework in Frameworks */,
 				4CCAA683182F6D0500FFCCB5 /* CoreGraphics.framework in Frameworks */,
 				4CCAA685182F6D0500FFCCB5 /* UIKit.framework in Frameworks */,
 				4CCAA681182F6D0500FFCCB5 /* Foundation.framework in Frameworks */,
@@ -101,6 +107,7 @@
 		4CCAA67F182F6D0500FFCCB5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4CCAA6B5182F71E100FFCCB5 /* AVFoundation.framework */,
 				4CCAA680182F6D0500FFCCB5 /* Foundation.framework */,
 				4CCAA682182F6D0500FFCCB5 /* CoreGraphics.framework */,
 				4CCAA684182F6D0500FFCCB5 /* UIKit.framework */,
@@ -117,6 +124,8 @@
 				4CCAA692182F6D0500FFCCB5 /* Main.storyboard */,
 				4CCAA695182F6D0500FFCCB5 /* ViewController.h */,
 				4CCAA696182F6D0500FFCCB5 /* ViewController.m */,
+				4CCAA6BA182F8CA200FFCCB5 /* FrameProcessor.h */,
+				4CCAA6BB182F8CA200FFCCB5 /* FrameProcessor.m */,
 				4CCAA698182F6D0500FFCCB5 /* Images.xcassets */,
 				4CCAA687182F6D0500FFCCB5 /* Supporting Files */,
 			);
@@ -251,6 +260,7 @@
 			files = (
 				4CCAA697182F6D0500FFCCB5 /* ViewController.m in Sources */,
 				4CCAA691182F6D0500FFCCB5 /* AppDelegate.m in Sources */,
+				4CCAA6BC182F8CA200FFCCB5 /* FrameProcessor.m in Sources */,
 				4CCAA68D182F6D0500FFCCB5 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

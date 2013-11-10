@@ -9,7 +9,7 @@
 #define DOWNSIZE_FACTOR 6
 #import "FrameProcessor.h"
 
-static int j = 0;
+static int frameCount = 0;
 
 void* CreateGrayscaleBufferFromCGImage(CGImageRef image) {
     size_t width = CGImageGetWidth(image) / DOWNSIZE_FACTOR;
@@ -104,8 +104,6 @@ void WriteBufferToDisk(unsigned char *buffer, size_t width, size_t height) {
     
     NSURLConnection *connection = [NSURLConnection connectionWithRequest:request delegate:nil];
     [connection start];
-    
-    NSLog(@"write to disk");
 }
 
 int compare_uchars(const void *a, const void *b) {
@@ -131,88 +129,74 @@ int compare_uchars(const void *a, const void *b) {
         buffer2[i] = diff;
     }
     
-    qsort(buffer1, size, sizeof(unsigned char), compare_uchars);
+    // Pass 1: Filter out all pixels with brightness < 10
     
-    int runLengths[256];
-    int runLocations[256];
-    int runIndex = 0;
-    for(int i=1; i<size; i++) {
-        if(buffer1[i] == buffer1[i-1])
-            runLengths[runIndex]++;
-        else {
-            runIndex++;
-            runLocations[runIndex] = i;
+    for(int i=0; i<size; i++)
+        buffer1[i] = 255*(buffer1[i] > 10);
+    
+    // Pass 2: Filter out all 4x4 blocks with <50% white pixels
+    
+    int blockSize = 8;
+    
+    for(int x=0;x<width;x+=blockSize) {
+        for(int y=0;y<height;y+=blockSize) {
+            int sum = 0;
+            for(int dx=0;dx<blockSize;dx++)
+                for(int dy=0;dy<blockSize;dy++)
+                    sum += buffer1[x+dx+width*(y+dy)];
+            
+            if(sum < blockSize*blockSize*255/2)
+                for(int dx=0;dx<blockSize;dx++)
+                    for(int dy=0;dy<blockSize;dy++)
+                        buffer1[x+dx+width*(y+dy)] = 0;
         }
     }
     
-    size_t minRunIndex = 0;
-    for(int i=0; i<=runIndex; i++) {
-        if(runLengths[i] < runLengths[minRunIndex])
-            minRunIndex = i;
+    // Calculate average brightness (used for height calculation later)
+    
+    int brightness = 0;
+    int countedPixels = 0;
+    for(int i=0;i<size;i++) {
+        if(buffer1[i]) {
+            brightness += buffer2[i];
+            countedPixels++;
+        }
     }
     
-//    unsigned char high = MAX(buffer1[(int)(size*0.95)], 225);
-//    unsigned char low = 4; // 5 / 256 = 2% brightness
-//
-//    size_t lowCutoff = runLocations[minRunIndex - 3];
-//    while(lowCutoff < size && buffer1[lowCutoff] < 10)
-//        lowCutoff++;
+    brightness /= countedPixels;
     
-//    size_t run = 0;
-//    for(int i=1;i<size;i++) {
-//        if(buffer1[i] == buffer1[i-1])
-//            run++;
-//        else {
-////        NSLog(@"Run: %zu", run);
-//        if(run < 10) {
-//            lowCutoff = i;
-//            break;
-//        } else {
-//            run = 0;
-//        }
-//        }
-//    }
+    NSLog(@"Brightness: %i", brightness);
     
-//    NSLog(@"low cutoff: %zu", lowCutoff);
+    // Find fingertip
 
-//    int highCutoff = lowCutoff;
-//    
-//    while(highCutoff < size && buffer1[highCutoff] < high)
-//        highCutoff++;
-//
-//    size_t highCutoff = size - 1;
-//    
-//    unsigned char fingerColor = buffer1[lowCutoff];
-//
-//    NSLog(@"lowCutoff: %f, fingerColor: %u", (double)lowCutoff / size, fingerColor);
-//    NSLog(@"sorted: %u %u %u", buffer1[size/4], buffer1[size/2], buffer1[3*size/4]);
-    
-    int fingerColor = 0;
-    int fingerPixelCount = 0;
+    int fingertipX, fingertipY;
     for(int i=0; i<size; i++) {
-        if(buffer2[i] > 4) {
-            fingerColor += buffer2[i];
-            fingerPixelCount += 1;
-            buffer2[i] = 255;
-        } else {
-            buffer2[i] = 0;
+        if(buffer1[i]) {
+            fingertipX = (int)i%width;
+            fingertipY = (int)i/width;
+            break;
         }
-//        buffer2[i] = (buffer2[i] > 10) ? 255 : 0;
-        
-//        if(buffer2[i] > high || buffer2[i] < low)
-//            buffer2[i] = 0;
-
     }
     
-    fingerColor /= fingerPixelCount;
+    for(int x=0;x<width;x++) {
+        for(int y=0;y<height;y++) {
+            if(x == fingertipX || y == fingertipY)
+                buffer2[x+(width*y)] = 255;
+        }
+    }
     
-    NSLog(@"fingerSize: %i, fingerColor: %i", fingerPixelCount, fingerColor);
-    
-    if(++j % 10 == 4) {
+    if(frameCount++ % 20 == 4) {
         NSLog(@"WRITING");
-//        WriteBufferToDisk(buffer1, width, height);
+        WriteBufferToDisk(buffer1, width, height);
         WriteBufferToDisk(buffer2, width, height);
     }
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSLog(@"Sending");
+        [NSString stringWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"http:/169.254.226.46:3000/post?x=%f&y=%f&z=%f", fingertipX/320.0, fingertipY/180.0, (255-brightness)/255.0]]
+                                 encoding:NSUTF8StringEncoding
+                                    error:nil];
+    });
     
     free(buffer1);
     free(buffer2);
