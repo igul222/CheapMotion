@@ -7,7 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <AVCaptureVideoDataOutputSampleBufferDelegate> {
+    AVCaptureSession *captureSession;
+    AVCaptureDevice *captureDevice;
+    BOOL torchOn;
+    AVCaptureVideoDataOutput *videoDataOutput;
+    dispatch_queue_t videoOutputQueue;
+    CGImageRef oddFrame;
+    int droppedFrames;
+    int i;
+}
 
 @end
