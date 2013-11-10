@@ -1,0 +1,475 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4CCAA681182F6D0500FFCCB5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCAA680182F6D0500FFCCB5 /* Foundation.framework */; };
+		4CCAA683182F6D0500FFCCB5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCAA682182F6D0500FFCCB5 /* CoreGraphics.framework */; };
+		4CCAA685182F6D0500FFCCB5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCAA684182F6D0500FFCCB5 /* UIKit.framework */; };
+		4CCAA68B182F6D0500FFCCB5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4CCAA689182F6D0500FFCCB5 /* InfoPlist.strings */; };
+		4CCAA68D182F6D0500FFCCB5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCAA68C182F6D0500FFCCB5 /* main.m */; };
+		4CCAA691182F6D0500FFCCB5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCAA690182F6D0500FFCCB5 /* AppDelegate.m */; };
+		4CCAA694182F6D0500FFCCB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CCAA692182F6D0500FFCCB5 /* Main.storyboard */; };
+		4CCAA697182F6D0500FFCCB5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCAA696182F6D0500FFCCB5 /* ViewController.m */; };
+		4CCAA699182F6D0500FFCCB5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CCAA698182F6D0500FFCCB5 /* Images.xcassets */; };
+		4CCAA6A0182F6D0500FFCCB5 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCAA69F182F6D0500FFCCB5 /* XCTest.framework */; };
+		4CCAA6A1182F6D0500FFCCB5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCAA680182F6D0500FFCCB5 /* Foundation.framework */; };
+		4CCAA6A2182F6D0500FFCCB5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCAA684182F6D0500FFCCB5 /* UIKit.framework */; };
+		4CCAA6AA182F6D0500FFCCB5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4CCAA6A8182F6D0500FFCCB5 /* InfoPlist.strings */; };
+		4CCAA6AC182F6D0500FFCCB5 /* CheapMotionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCAA6AB182F6D0500FFCCB5 /* CheapMotionTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4CCAA6A3182F6D0500FFCCB5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4CCAA675182F6D0500FFCCB5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4CCAA67C182F6D0500FFCCB5;
+			remoteInfo = CheapMotion;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4CCAA67D182F6D0500FFCCB5 /* CheapMotion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CheapMotion.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CCAA680182F6D0500FFCCB5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4CCAA682182F6D0500FFCCB5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		4CCAA684182F6D0500FFCCB5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		4CCAA688182F6D0500FFCCB5 /* CheapMotion-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CheapMotion-Info.plist"; sourceTree = "<group>"; };
+		4CCAA68A182F6D0500FFCCB5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4CCAA68C182F6D0500FFCCB5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4CCAA68E182F6D0500FFCCB5 /* CheapMotion-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CheapMotion-Prefix.pch"; sourceTree = "<group>"; };
+		4CCAA68F182F6D0500FFCCB5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4CCAA690182F6D0500FFCCB5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4CCAA693182F6D0500FFCCB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4CCAA695182F6D0500FFCCB5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		4CCAA696182F6D0500FFCCB5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		4CCAA698182F6D0500FFCCB5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		4CCAA69E182F6D0500FFCCB5 /* CheapMotionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CheapMotionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CCAA69F182F6D0500FFCCB5 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		4CCAA6A7182F6D0500FFCCB5 /* CheapMotionTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CheapMotionTests-Info.plist"; sourceTree = "<group>"; };
+		4CCAA6A9182F6D0500FFCCB5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4CCAA6AB182F6D0500FFCCB5 /* CheapMotionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CheapMotionTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4CCAA67A182F6D0500FFCCB5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CCAA683182F6D0500FFCCB5 /* CoreGraphics.framework in Frameworks */,
+				4CCAA685182F6D0500FFCCB5 /* UIKit.framework in Frameworks */,
+				4CCAA681182F6D0500FFCCB5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CCAA69B182F6D0500FFCCB5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CCAA6A0182F6D0500FFCCB5 /* XCTest.framework in Frameworks */,
+				4CCAA6A2182F6D0500FFCCB5 /* UIKit.framework in Frameworks */,
+				4CCAA6A1182F6D0500FFCCB5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4CCAA674182F6D0500FFCCB5 = {
+			isa = PBXGroup;
+			children = (
+				4CCAA686182F6D0500FFCCB5 /* CheapMotion */,
+				4CCAA6A5182F6D0500FFCCB5 /* CheapMotionTests */,
+				4CCAA67F182F6D0500FFCCB5 /* Frameworks */,
+				4CCAA67E182F6D0500FFCCB5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4CCAA67E182F6D0500FFCCB5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4CCAA67D182F6D0500FFCCB5 /* CheapMotion.app */,
+				4CCAA69E182F6D0500FFCCB5 /* CheapMotionTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4CCAA67F182F6D0500FFCCB5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4CCAA680182F6D0500FFCCB5 /* Foundation.framework */,
+				4CCAA682182F6D0500FFCCB5 /* CoreGraphics.framework */,
+				4CCAA684182F6D0500FFCCB5 /* UIKit.framework */,
+				4CCAA69F182F6D0500FFCCB5 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4CCAA686182F6D0500FFCCB5 /* CheapMotion */ = {
+			isa = PBXGroup;
+			children = (
+				4CCAA68F182F6D0500FFCCB5 /* AppDelegate.h */,
+				4CCAA690182F6D0500FFCCB5 /* AppDelegate.m */,
+				4CCAA692182F6D0500FFCCB5 /* Main.storyboard */,
+				4CCAA695182F6D0500FFCCB5 /* ViewController.h */,
+				4CCAA696182F6D0500FFCCB5 /* ViewController.m */,
+				4CCAA698182F6D0500FFCCB5 /* Images.xcassets */,
+				4CCAA687182F6D0500FFCCB5 /* Supporting Files */,
+			);
+			path = CheapMotion;
+			sourceTree = "<group>";
+		};
+		4CCAA687182F6D0500FFCCB5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4CCAA688182F6D0500FFCCB5 /* CheapMotion-Info.plist */,
+				4CCAA689182F6D0500FFCCB5 /* InfoPlist.strings */,
+				4CCAA68C182F6D0500FFCCB5 /* main.m */,
+				4CCAA68E182F6D0500FFCCB5 /* CheapMotion-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4CCAA6A5182F6D0500FFCCB5 /* CheapMotionTests */ = {
+			isa = PBXGroup;
+			children = (
+				4CCAA6AB182F6D0500FFCCB5 /* CheapMotionTests.m */,
+				4CCAA6A6182F6D0500FFCCB5 /* Supporting Files */,
+			);
+			path = CheapMotionTests;
+			sourceTree = "<group>";
+		};
+		4CCAA6A6182F6D0500FFCCB5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4CCAA6A7182F6D0500FFCCB5 /* CheapMotionTests-Info.plist */,
+				4CCAA6A8182F6D0500FFCCB5 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4CCAA67C182F6D0500FFCCB5 /* CheapMotion */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4CCAA6AF182F6D0500FFCCB5 /* Build configuration list for PBXNativeTarget "CheapMotion" */;
+			buildPhases = (
+				4CCAA679182F6D0500FFCCB5 /* Sources */,
+				4CCAA67A182F6D0500FFCCB5 /* Frameworks */,
+				4CCAA67B182F6D0500FFCCB5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CheapMotion;
+			productName = CheapMotion;
+			productReference = 4CCAA67D182F6D0500FFCCB5 /* CheapMotion.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4CCAA69D182F6D0500FFCCB5 /* CheapMotionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4CCAA6B2182F6D0500FFCCB5 /* Build configuration list for PBXNativeTarget "CheapMotionTests" */;
+			buildPhases = (
+				4CCAA69A182F6D0500FFCCB5 /* Sources */,
+				4CCAA69B182F6D0500FFCCB5 /* Frameworks */,
+				4CCAA69C182F6D0500FFCCB5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4CCAA6A4182F6D0500FFCCB5 /* PBXTargetDependency */,
+			);
+			name = CheapMotionTests;
+			productName = CheapMotionTests;
+			productReference = 4CCAA69E182F6D0500FFCCB5 /* CheapMotionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4CCAA675182F6D0500FFCCB5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = Watchsend;
+				TargetAttributes = {
+					4CCAA69D182F6D0500FFCCB5 = {
+						TestTargetID = 4CCAA67C182F6D0500FFCCB5;
+					};
+				};
+			};
+			buildConfigurationList = 4CCAA678182F6D0500FFCCB5 /* Build configuration list for PBXProject "CheapMotion" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4CCAA674182F6D0500FFCCB5;
+			productRefGroup = 4CCAA67E182F6D0500FFCCB5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4CCAA67C182F6D0500FFCCB5 /* CheapMotion */,
+				4CCAA69D182F6D0500FFCCB5 /* CheapMotionTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4CCAA67B182F6D0500FFCCB5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CCAA699182F6D0500FFCCB5 /* Images.xcassets in Resources */,
+				4CCAA68B182F6D0500FFCCB5 /* InfoPlist.strings in Resources */,
+				4CCAA694182F6D0500FFCCB5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CCAA69C182F6D0500FFCCB5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CCAA6AA182F6D0500FFCCB5 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4CCAA679182F6D0500FFCCB5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CCAA697182F6D0500FFCCB5 /* ViewController.m in Sources */,
+				4CCAA691182F6D0500FFCCB5 /* AppDelegate.m in Sources */,
+				4CCAA68D182F6D0500FFCCB5 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CCAA69A182F6D0500FFCCB5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CCAA6AC182F6D0500FFCCB5 /* CheapMotionTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4CCAA6A4182F6D0500FFCCB5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4CCAA67C182F6D0500FFCCB5 /* CheapMotion */;
+			targetProxy = 4CCAA6A3182F6D0500FFCCB5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4CCAA689182F6D0500FFCCB5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4CCAA68A182F6D0500FFCCB5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		4CCAA692182F6D0500FFCCB5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4CCAA693182F6D0500FFCCB5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4CCAA6A8182F6D0500FFCCB5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4CCAA6A9182F6D0500FFCCB5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4CCAA6AD182F6D0500FFCCB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4CCAA6AE182F6D0500FFCCB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4CCAA6B0182F6D0500FFCCB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CheapMotion/CheapMotion-Prefix.pch";
+				INFOPLIST_FILE = "CheapMotion/CheapMotion-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		4CCAA6B1182F6D0500FFCCB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CheapMotion/CheapMotion-Prefix.pch";
+				INFOPLIST_FILE = "CheapMotion/CheapMotion-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		4CCAA6B3182F6D0500FFCCB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CheapMotion.app/CheapMotion";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CheapMotion/CheapMotion-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "CheapMotionTests/CheapMotionTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		4CCAA6B4182F6D0500FFCCB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CheapMotion.app/CheapMotion";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CheapMotion/CheapMotion-Prefix.pch";
+				INFOPLIST_FILE = "CheapMotionTests/CheapMotionTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4CCAA678182F6D0500FFCCB5 /* Build configuration list for PBXProject "CheapMotion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CCAA6AD182F6D0500FFCCB5 /* Debug */,
+				4CCAA6AE182F6D0500FFCCB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4CCAA6AF182F6D0500FFCCB5 /* Build configuration list for PBXNativeTarget "CheapMotion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CCAA6B0182F6D0500FFCCB5 /* Debug */,
+				4CCAA6B1182F6D0500FFCCB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4CCAA6B2182F6D0500FFCCB5 /* Build configuration list for PBXNativeTarget "CheapMotionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CCAA6B3182F6D0500FFCCB5 /* Debug */,
+				4CCAA6B4182F6D0500FFCCB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4CCAA675182F6D0500FFCCB5 /* Project object */;
+}
